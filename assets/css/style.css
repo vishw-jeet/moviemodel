@@ -3,10 +3,10 @@
 body{
 background-color: #ededed;
 }
-h2{
+.ourmodel.scard-header h2{
     position: relative;
-}
-h2 i{
+}   
+.ourmodel.card-header  h2 i{
     position: absolute;
     top: 7px;
     right: 15px;
