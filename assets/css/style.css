@@ -3,11 +3,36 @@
 body{
 background-color: #ededed;
 }
+h2{
+    position: relative;
+}
+h2 i{
+    position: absolute;
+    top: 7px;
+    right: 15px;
+}
+.backdrop .active{
+    display: block;
+}
+.ourmodel {
+    display: block;
+}
 .backdrop {
     position: fixed;
-    top: 50%;
-    left: 25%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.5);
+    display: none;
+}
+.ourmodel {
+    height: 400px;
+    width: 60%;
+    background-color: #fff;
+    position: fixed;
+    left: 20%;
+    top: 25%;
+    border-radius: 15px;
+    display: none;
 }
