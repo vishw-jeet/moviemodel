@@ -10,6 +10,8 @@ const movieTitleControl=document.getElementById("movieTitle");
 const imgurlControl=document.getElementById("imgurl");
 const movieratingControl=document.getElementById("movierating");
 const deletebtn=document.getElementById("deletebtn")
+const imgCardcontrol=document.getElementById("imgCard");
+const submitBtn=document.getElementById("submitBtn");
 
 
 const onMovieAdd=()=>{
@@ -33,11 +35,43 @@ const onMoviesubmit=((eve)=>{
     movieArrey.push(newObj);
     cl( movieArrey)
     movieFrom.reset()
-})
+    let result="";
+movieArrey.forEach((ele)=>{
+    result+=`  <div class="col-md-4">
+                <div class="img-card">
+    <figure class="m-0 figure">
+      <img src="${ele.imgUrl}" alt="movieImg" class="img">
+      <figcaption class="figcaption">
+        <div class="card-body p-0 bg-info">
+         <div class="row">
+          <div class="col-3">
+            <h2 class-="m-0">${ele.titale} </h2>
+          </div>
+          <div class="col-9 text-right">
+            <em class="p-4">${ele.rating}</em>
+          </div>
+         </div>
+      </figcaption>
+      <button type="button" class="btn btn-danger float-right"id="deletebtn">Delete</button>
+    </figure>  
+                 </div>
+                </div>`
+});
+cl(result)
+imgCardcontrol.innerHTML=result;
+    onMovieAdd()
 
-const onDelete=()=>{
-    
-}
+})
+// function onDeletebtn(eve){
+//     cl(eve)
+//     eve.classList.add("d-none");
+// } 
+const onDelete=(eve)=>{
+    cl(eve)
+    eve.classList.add("d-none");
+};
+
+
 addbtn.addEventListener("click",onMovieAdd);
 
 movieFrom.addEventListener("submit",onMoviesubmit);
