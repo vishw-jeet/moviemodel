@@ -18,33 +18,51 @@
         <h1> Movie Gallery</h1>
       </div>
       <div class="col-6 text-right m-0 parrentbtn d-flex justify-content-end align-items-center">
-        <button type="button" class="btn btn-warning"> Add Movie</button>
+        <button type="button" class="btn btn-warning" id="addbtn"> Add Movie</button>
       </div>
       </div>
   </div>
 </header>
 <div class="container mt-4">
   <div class="row">
-
+    <div class="col-md-4">
+      <div class="img-card">
+        <figure class="m-0 figure">
+          <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/h6Z2oogE4mJk2uffdtIlLhb0EHx.jpg" alt="movieImg" class="img">
+          <figcaption class="figcaption">
+            <div class="card-body p-0 bg-info">
+             <div class="row">
+              <div class="col-3">
+                <h2 class-="m-0">Title </h2>
+              </div>
+              <div class="col-9 text-right">
+                <em class="p-4">4</em>
+              </div>
+             </div>
+          </figcaption>
+        </figure> 
+      </div>
+      <button type="button" class="btn btn-danger float-right">Delete</button>
+    </div>
   </div>
 </div>
-<div class="backdrop" id="backdrop"></div>
+<div class="backdrop closeBackDrop" id="backdrop"></div>
 <div class="ourmodel" id="ourmodel">
   <div class="card-header">
    <h2 class="m-0"> Add Movie Deatils
-    <i class="fa-solid fa-xmark "></i>
+    <i class="fa-solid fa-xmark float-right closeBackDrop"></i>
    </h2>
   </div>
   
   <div class="card-body">
-    <form>
+    <form id="movieFrom">
      <div class="form-group">
       <label for="movieTitle">Title</label>
       <input type="text" id="movieTitle" class="form-control">
      </div>
      <div class="form-group">
-      <label for="movieurl">Movie Url</label>
-      <input type="text" id="movieurl" class="form-control">
+      <label for="imgurl">Movie Url</label>
+      <input type="text" id="imgurl" class="form-control">
      </div>
      <div class="form-group">
       <label for="movierating">Movie Rating</label>
@@ -59,7 +77,7 @@
      </div>
     <div class="moviebtn text-right">
       <button type="submit" class="btn btn-info ">Add Movie</button>
-      <button type="button"class=" btn btn-danger ">Cancle</button>
+      <button type="button"class=" btn btn-danger closeBackDrop"id="addMovie">Cancel</button>
     </div>
     </form>
   </div>

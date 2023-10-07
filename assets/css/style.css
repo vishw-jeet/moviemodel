@@ -11,10 +11,10 @@ background-color: #ededed;
     top: 7px;
     right: 15px;
 }
-.backdrop .active{
+.backdrop.active{
     display: block;
 }
-.ourmodel {
+.ourmodel.active{
     display: block;
 }
 .backdrop {
@@ -25,6 +25,7 @@ background-color: #ededed;
     height: 100vh;
     background-color: rgba(0,0,0,.5);
     display: none;
+    cursor: pointer;
 }
 .ourmodel {
     height: 400px;
@@ -35,4 +36,39 @@ background-color: #ededed;
     top: 25%;
     border-radius: 15px;
     display: none;
+    cursor: pointer;
+}
+.card-header i{
+    cursor: pointer;
+}
+
+.card-body em{
+    font-size: 30px;
+}
+.img-card{
+    width:100%;
+    position: relative;
+
+
+}
+.img-card .figcaption{
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: -15px;
+    display: none;
+    transition: all 0.7s linear;
+}
+.img-card:hover .figcaption{
+    cursor: pointer;
+    height: 25px;
+    bottom: 0%;
+    top: 86%;
+    display: block;
+   
+}
+figure img{
+    width: 100%;
+    height: 100%;
 }
