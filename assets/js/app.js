@@ -9,6 +9,7 @@ const movieFrom=document.getElementById("movieFrom");
 const movieTitleControl=document.getElementById("movieTitle");
 const imgurlControl=document.getElementById("imgurl");
 const movieratingControl=document.getElementById("movierating");
+const deletebtn=document.getElementById("deletebtn")
 
 
 const onMovieAdd=()=>{
@@ -34,6 +35,11 @@ const onMoviesubmit=((eve)=>{
     movieFrom.reset()
 })
 
+const onDelete=()=>{
+    
+}
 addbtn.addEventListener("click",onMovieAdd);
 
 movieFrom.addEventListener("submit",onMoviesubmit);
+
+deletebtn.addEventListener("click",onDelete)
